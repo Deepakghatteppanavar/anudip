@@ -1,0 +1,97 @@
+**------------------------------Assignment - 1----------------------------------------------**
+
+Q.1. Write a Python program to Get Only unique items from two sets. 
+
+set1 = {10, 20, 30, 40, 50} 
+set2 = {30, 40, 50, 60, 70}
+
+# by using union method 
+uniqu = set1.union(set2)
+print("unique items from two sets. " ,  uniqu)
+
+#By using or operator
+unique = set1 | set2 
+print("unique items from two sets using or operator is ." ,unique)
+
+
+OUTPUT:
+unique items from two sets.  {70, 40, 10, 50, 20, 60, 30}
+unique items from two sets using or operator is . {70, 40, 10, 50, 20, 60, 30}
+
+
+**------------------------------Assignment - 2----------------------------------------------**
+
+Q.2. Write a Python program to Return a set of elements present in Set A or B, but not both.
+
+
+CODE:
+
+# Define the sets
+set1 = {10, 20, 30, 40, 50}
+set2 = {30, 40, 50, 60, 70}
+
+
+# Compute the symmetric difference
+symmetric_diff = set1 ^ set2
+
+# Compute the symmetric difference using the method
+symmetric_diff1 = set1.symmetric_difference(set2)
+
+# Print the result
+print("The symmetric difference between set1 and set2 using ^ operator is:", symmetric_diff)
+print("The symmetric difference between set1 and set2 using symmetric_difference method is:", symmetric_diff1)
+
+OUTPUT:
+The symmetric difference between set1 and set2 using ^ operator is: {10, 20, 60, 70}
+The symmetric difference between set1 and set2 using symmetric_difference method is: {10, 20, 60, 70}
+
+
+**----------------------------------------------Assignment - 3---------------------------------------------------**
+
+Q. 3. Write a Python program to Check if two sets have any elements in common. If yes, display the common elements. 
+
+
+CODE:
+
+#INPUT VALUES
+set1 = {10, 20, 30, 40, 50} 
+set2 = {60, 70, 80, 90, 10} 
+
+#using intersection method
+common = set1.intersection(set2)
+print("Given set having common values are " , common)
+
+#using and(&) operator
+common1 = set1 & set2
+print("Given set having common values using operator are ", common1)
+
+
+OUTPUT:
+Given set having common values are  {10}
+Given set having common values using operator are  {10}
+
+**------------------------------Assignment - 4----------------------------------------------------**
+
+Q.4. Write a Python program to Remove items from set1 that are not common to both set1 and set2.
+
+CODE:
+
+# Define the sets
+set1 = {10, 20, 30, 40, 50}
+set2 = {30, 40, 50, 60, 70}
+
+# Compute the intersection
+common_elements = set1 & set2
+
+# Update set1 to only include common elements
+set1.intersection_update(set2)
+
+# Print the result
+print("After removing items not common to both sets, set1 is:", set1)
+
+
+OUTPUT:
+After removing items not common to both sets, set1 is: {30, 40, 50}
+
+
+

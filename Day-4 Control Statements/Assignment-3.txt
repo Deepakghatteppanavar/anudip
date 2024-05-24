@@ -1,0 +1,167 @@
+**------------------------------Assigment - 1-------------------------------**
+Q.1. Python program to check leap year 
+
+//Code
+
+# MAin function
+
+def leap_year():
+    # Taking an input
+    days = int(input("Enter a days check  whether year is leap year or not : "))
+    
+    # if else condition to check the year 
+    if days == 366:
+        print("Given days as ", days, "is a leap year")
+    else:
+        print( "this number is not leap year")
+
+leap_year()
+
+//output
+
+Enter a days check  whether year is leap year or not : 368
+this number is not leap year
+
+Enter a days check  whether year is leap year or not : 366
+Given days as  366 is a leap year
+
+
+**---------------------------------------Assigment - 2------------------------------------------**
+
+Q.2. Python Program to Find the Largest Among Three Numbers 
+
+//Code
+
+# Main Function
+def greatestofthree():
+    # Taking Inputs
+    num1 = 10
+    num2 = 20
+    num3 = 30
+
+    # checking inputs using if condition
+
+    if(num1 > num2 & num1 > num3):
+        print("Greatest of three number is " ,num1)
+    elif(num2 > num1 & num2 > num3):
+        print("Greatest of three number is ", num2)
+    else:
+        print("Greatest of three number is ", num3)
+
+greatestofthree()
+
+//Output
+Greatest of three number is  30
+
+
+**---------------------------------------Assigment - 3------------------------------------------**
+
+Q.3 Python Program to Check if a Number is Positive, Negative or 0 
+
+//Code 
+
+# sub function
+def postive_negative(number):
+    if number > 0:
+        print("Number is postive Number")
+    elif (number < 0):
+        print( "Number0 is negative")
+    else:
+        print( "Number is zero type" )
+    
+# main function
+def fun():
+    numb = int(input("Enter a number to check postive , negative or zero number : "))
+    #Calling sub function
+    result = postive_negative(numb)
+fun()
+
+//output
+
+Enter a number to check postive , negative or zero number : 0
+Number is zero type
+
+**---------------------------------------Assigment - 4-----------------------------------------------------------------------------------------------------------------------------------**
+
+Q.4. A toy vendor supplies three types of toys: Battery Based Toys, Key-based Toys, and Electrical Charging Based Toys. The vendor gives a discount of 10% on orders for battery-based toys if the order is for more than Rs. 1000. On orders of more than Rs. 100 for key-based toys, a discount of 5% is given, and a discount of 10% is given on orders for electrical charging based toys of value more than Rs. 500. Assume that the numeric codes 1,2 and 3 are used for battery based toys, key-based toys, and electrical charging based toys respectively. Write a program that reads the product code and the order amount and prints out the net amount that the customer is required to pay after the discount. 
+
+//Code
+
+# Sub function with parametrs
+def calculate_discount(product_code, order_amount):
+    discount = 0
+    # if condition to check the every condition
+    if product_code == 1 and order_amount > 1000:
+        discount = 0.1
+    elif product_code == 2 and order_amount > 100:
+        discount = 0.05
+    elif product_code == 3 and order_amount > 500:
+        discount = 0.1
+    # Substracting the total amount with discounted amount
+    discounted_amount = order_amount - (order_amount * discount)
+    return discounted_amount
+
+# MAin Function
+def main():
+    # Taking an input 
+    product_code = int(input("Enter product code (1 for Battery Based Toys, 2 for Key-based Toys, 3 for Electrical Charging Based Toys): "))
+    order_amount = float(input("Enter order amount in Rs.: "))
+    # Calling the function
+    net_amount = calculate_discount(product_code, order_amount)
+    # print the result
+    print("Net amount after discount: Rs.", net_amount)
+
+main()
+
+
+// Output
+
+Enter product code (1 for Battery Based Toys, 2 for Key-based Toys, 3 for Electrical Charging Based Toys): 1
+Enter order amount in Rs.: 500
+Net amount after discount: Rs. 500.0
+
+Enter product code (1 for Battery Based Toys, 2 for Key-based Toys, 3 for Electrical Charging Based Toys): 2
+Enter order amount in Rs.: 200
+Net amount after discount: Rs. 190.0
+
+
+**---------------------------------------Assigment - 5------------------------------------------**
+
+Q.5. A transport company charges the fare according to following table: Distance Charges 1-50 8 Rs./Km 51-100 10 Rs./Km > 100 12 Rs/Km
+
+//Code 
+
+# Sub Function 
+def transport_comapny(distance):   
+    
+    # if condition to check the every condition
+    if distance >= 1 and distance <= 50:
+        charges = 8
+    elif distance >= 51 and distance <=100:
+        charges = 10
+    elif distance >= 100:
+        charges = 12
+    # Counting distance and percentage
+    total_charge = distance * charges
+
+    return total_charge
+    
+
+# MAin Function
+
+def fun():
+    # Taking an input 
+    distances = int(input("Enter the distance to apply the chagres accordingly to the kilometres : "))
+    
+    # Calling the function
+    total_charges = transport_comapny(distances)
+
+    # print the result
+    print("You have travled" ,distances,"and your total price will be : ", total_charges)
+
+fun()
+
+//output
+Enter the distance to apply the chagres accordingly to the kilometres : 100
+You have travled 100 and your total price will be :  1000
+

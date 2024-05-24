@@ -1,0 +1,125 @@
+**------------------------------Assigment - 1-------------------------------**
+
+1. Calculate the multiplication and sum of two numbers
+
+//Code
+
+# Without using function
+numa = 10
+numb = 20
+num3 = numa + numb
+num4 = numa * numb # using multiplication operator
+
+print("Addition of two numbers is : - ", num3)  # Printing Output using third variable
+
+print("Multiplication of two numbers is : - ", num4)
+# ------------------------------------------------------------------------------------
+def multi():
+    num1 = int(input("Enter a First value : -"))  # taking input from user
+    num2 = int(input("Enter a Second value : - "))
+    print("Addition of two numbers is : -", num1 + num2)
+    print("Multiplication of two numbers is : - ", num1 * num2)
+
+multi()
+
+
+//Output
+Addition of two numbers is : -  30
+Multiplication of two numbers is : -  200
+Enter a First value : -15
+Enter a Second value : - 30
+Addition of two numbers is : - 45
+Multiplication of two numbers is : -  450
+
+
+
+**---------------------------------------Assigment - 2------------------------------------------**
+
+2. Declare two variables and print that which variable is largest using ternary operators
+
+//Code 
+
+# Declare two variables
+variable1 = 10
+variable2 = 20
+
+# Print the largest variable using ternary operators
+largest_variable = variable1 if variable1 > variable2 else variable2
+print("The largest variable is:", largest_variable)
+
+# Another Method
+print("The largest variable is:", variable1 if variable1 > variable2 else variable2)
+
+
+//Output
+
+The largest variable is: 20
+The largest variable is: 20
+
+
+**---------------------------------------Assigment - 3------------------------------------------**
+
+3. Python program to convert the temperature in degree centigrade to Fahrenheit
+
+//Code
+
+# Function to convert temperature from Celsius to Fahrenheit
+def celsius_to_fahrenheit(celsius):
+    fahrenheit = (celsius * 9/5) + 32
+    return fahrenheit
+
+# Input temperature in Celsius
+celsius_temperature = float(input("Enter temperature in Celsius: "))
+
+# Convert Celsius to Fahrenheit
+fahrenheit_temperature = celsius_to_fahrenheit(celsius_temperature)
+
+# Print the result
+print("Temperature in Fahrenheit:", fahrenheit_temperature)
+
+//Output
+
+Enter temperature in Celsius: 50
+Temperature in Fahrenheit: 122.0
+
+
+
+**---------------------------------------Assigment - 4------------------------------------------**
+
+4. Python program to find the area of a triangle whose sides are given
+
+//Code
+import math
+
+# Input lengths of the sides of the triangle
+base = float(input("Enter the length of side a: "))
+height = float(input("Enter the length of side b: "))
+
+# Calculate the Area of Triangle
+area_of_triangle = (0.5 * base * height)
+
+# Print the result
+print("Area of the triangle:", area_of_triangle)
+
+
+# Using Another Method
+
+def area():
+    base1 = 10
+    height1 = 20
+    # Return method
+
+    Sum = 0.5 * base1 * height1
+    print("Area of the triangle:", Sum)
+
+area()
+
+
+//Output
+
+Enter the length of side a: 5
+Enter the length of side b: 4
+Area of the triangle: 10.0
+Area of the triangle: 100.0
+
+

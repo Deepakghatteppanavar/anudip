@@ -1,0 +1,118 @@
+**------------------------------Assigment - 1---------------------------------------------**
+
+Q. 1. Print the first 10 natural numbers using for loop 
+
+//Code
+
+# using for loop
+for x in range(1, 11):
+  print(x) 
+
+//Output
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+**------------------------------Assigment - 2----------------------------------------------**
+
+
+Q.2. Python program to check if the given string is a palindrome 
+
+//Code
+
+
+# Main Function
+def palindrom():
+
+    #taking an input
+    num = int(input("Enter a number to check the number is palindrom or not : "))
+
+    #Convert integer to string 
+    num = str(num)
+
+    #logic -1 will move to code for last string value
+    num1 = num[::-1]
+
+    #check the condition 
+    if num1 == num:
+        print("Given number is palindrom")
+    else:
+        print("It is not palindrom number ")
+palindrom()
+
+//Output
+Enter a number to check the number is palindrom or not : 121
+Given number is palindrom
+
+**------------------------------Assigment - 3----------------------------------------------**
+
+Q.3. Python program to check if a given number is an Armstrong number 
+
+
+//code
+
+def is_armstrong(num):
+    #Coverting to string
+    num_str = str(num)
+    num_digits = len(num_str)
+    sum_of_powers = sum(int(digit)**num_digits for digit in num_str)
+    return sum_of_powers == num
+
+
+number_to_check = 153
+result = is_armstrong(number_to_check)
+
+if result:
+    print(f"{number_to_check} is an Armstrong number.")
+else:
+    print(f"{number_to_check} is not an Armstrong number.")
+
+//Output
+
+153 is an Armstrong number.
+
+
+**------------------------------Assigment - 4----------------------------------------------**
+
+Q. 4. Python program to get the Fibonacci series between 0 to 50 
+
+// Code
+
+# Function to generate Fibonacci series up to n using a for loop
+def fibonacci_series(n):
+    fib_series = [0, 1]
+    for i in range(2, n):
+        next_num = fib_series[i-1] + fib_series[i-2]
+        if next_num < n:
+            fib_series.append(next_num)
+        else:
+            break
+    return fib_series
+
+# Generate Fibonacci series up to 50
+fib_series_50 = fibonacci_series(50)
+
+# Print the Fibonacci series
+print("Fibonacci series up to 50:")
+print(fib_series_50)
+
+//Output
+
+Fibonacci series up to 50:
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+//Output
+Enter your password: 123123
+Password length should be at least 8 characters
+
+Enter your password: Abcdqwe@001
+Password is valid
+
+
